@@ -12,6 +12,7 @@ const TempComponent = (props) => {
     const getFirstUser = async () => {
       const response = await props.loadUserById(1);
       setUser(response.payload)
+      return response.payload;
     }
 
     getFirstUser()

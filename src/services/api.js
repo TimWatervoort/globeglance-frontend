@@ -10,7 +10,6 @@ export const getRequest = async endpoint => {
       headers: baseHeaders
     }
   )
-  console.log(response)
   const json = await response.json()
   return json
 }
