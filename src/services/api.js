@@ -3,10 +3,14 @@ const baseHeaders = {
 }
 
 export const getRequest = async endpoint => {
-  const response = await fetch({
-    method: 'GET',
-    url: `${process.env.GLOBALIZER_API_URL}/${endpoint}`,
-    headers: baseHeaders
-  })
-  return response
+  const response = await fetch(
+    `${process.env.REACT_APP_GLOBALIZER_API_URL}/${endpoint}`,
+    {
+      method: 'GET',
+      headers: baseHeaders
+    }
+  )
+  console.log(response)
+  const json = await response.json()
+  return json
 }
