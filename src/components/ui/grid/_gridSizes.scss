@@ -1,0 +1,13 @@
+@for $num from 1 through 12 {
+  .gu-col-#{$num} {
+    --width-mobile: #{$num};
+    --width-tablet: #{$num};
+  }
+}
+
+@for $num from 1 through 12 {
+  .gu-rescol-#{$num} {
+    --width-mobile: 12;
+    --width-tablet: #{$num};
+  }
+}

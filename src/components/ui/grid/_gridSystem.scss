@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: white;
+}
+
+*, ::after, ::before { 
+  box-sizing: border-box;
+}
+
+.gu-container {
+  --columns: 12;
+
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gu-col {
+  --width-default: 0;
+  --width: var(--width-mobile, var(--width-default));
+
+  flex-basis: calc(var(--width) / var(--columns) * 100%);
+}
+
+@media (orientation: landscape) {
+  .gu-col {
+    --width: var(--width-tablet, var(--width-mobile, var(--width-default)));
+  }
+}
+
+.gu-padHor {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.gu-padVer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.gu-test-item {
+  background-color: gray;
+  border-radius: 8px;
+  padding: 16px;
+}

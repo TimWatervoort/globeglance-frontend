@@ -22,7 +22,17 @@ const TempComponent = (props) => {
 
   return (
     <>
-     <h1>Temp Component Loading</h1>
+     <div className='gu-container'>
+         <div className='gu-col gu-rescol-4 gu-padHor'>
+           <p className='gu-test-item'>A boy</p>
+         </div>
+         <div className='gu-col gu-rescol-4 gu-padHor'>
+           <p className='gu-test-item'>A boy</p>
+         </div>
+         <div className='gu-col gu-rescol-4 gu-padHor'>
+           <p className='gu-test-item'>A boy</p>
+         </div>
+      </div>
     </>
   )
 }
