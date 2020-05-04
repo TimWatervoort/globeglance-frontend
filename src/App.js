@@ -1,13 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import 'components/ui/style.scss';
-import TempComponent from 'components/TempComponent'
+// import TempComponent from 'components/TempComponent';
+import Navbar from 'components/ui/Navbar';
+import { connect } from 'react-redux';
+import { selectTheme } from 'state/preferences/selectors';
 
-function App() {
+const App = props => {
+  const { theme } = props;
+
   return (
     <div className="App">
-        <TempComponent />
+        <Navbar theme={ theme } />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  theme: selectTheme(state)
+});
+
+App.propTypes = {
+  theme: PropTypes.string
+}
+
+App.defaultProps = {
+  theme: 'light'
+}
+
+export default connect(mapStateToProps)(App);
