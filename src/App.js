@@ -5,13 +5,18 @@ import 'components/ui/style.scss';
 import Navbar from 'components/ui/Navbar';
 import { connect } from 'react-redux';
 import { selectTheme } from 'state/preferences/selectors';
+import { Route, Switch } from 'react-router-dom';
+import Home from 'components/Home';
 
 const App = props => {
   const { theme } = props;
 
   return (
     <div className="App">
-        <Navbar theme={ theme } />
+      <Navbar theme={ theme } />
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
     </div>
   );
 }

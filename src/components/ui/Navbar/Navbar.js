@@ -10,7 +10,7 @@ const Navbar = props => {
 
   return (
     <nav className={`gu-navbar gu-navbar-${theme}`}>
-      <h3 className='gu-navheader'>GlobeGlance</h3>
+      <h1 className='gu-navheader'>GlobeGlance</h1>
     </nav>
   )
 }
